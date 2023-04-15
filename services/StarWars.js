@@ -23,10 +23,10 @@ const getFilmsById = async (id) => {
 
         if (!response.data)
         {
-            throw new Error(`Movie with ID ${id} not found.`);
+            return ;
         }
 
-        return response.data;
+        return response;
     }
     catch (error)
     {
