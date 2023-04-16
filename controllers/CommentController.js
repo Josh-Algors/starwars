@@ -1,6 +1,6 @@
 const filmRepository = require('../repositories/FilmRepository');
 const commentRepository = require('../repositories/CommentRepository');
-const starWars = require("../services/StarWars");
+const starWars = require("../services/FilmService");
 const helpers = require("../config/helpers");
 const Joi = require("joi");
 
