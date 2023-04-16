@@ -7,15 +7,6 @@ const getFilms = async () => {
 
     try
     {
-        const cacheKey = 'movies';
-        let movies = cache.get(cacheKey);
-        
-        if(movies)
-        {
-            return movies;
-        }
-        else
-        {
         const getFilms = await filmRepository.getAllFilms();
         const response = await axios.get('https://swapi.dev/api/films');
         const responses = response.data.results;
@@ -38,14 +29,12 @@ const getFilms = async () => {
             count++;
             }
             
-            getFilms.sort((a, b) => a.release_date - b.release_date);
+            getFilms.sort((a, b) => new Date(a.release_date) - new Date(b.release_date));
 
-            return getFilms;
+            return responses;
         }
         
-        cache.set(cacheKey, getFilms);
         return getFilms;
-        }
     }
     catch(error)
     {
@@ -57,15 +46,6 @@ const getFilmsById = async (id) => {
 
     try
     {
-        const cacheKey = `movie-${id}`;
-        let movie = cache.get(cacheKey);
-
-        if(movie)
-        {
-        return movie;
-        }
-        else
-        {
         const film = await filmRepository.getFilmById(id);
 
         if(!film)
@@ -86,9 +66,7 @@ const getFilmsById = async (id) => {
             }
         }
         
-        cache.set(cacheKey, film);
         return film;
-        }
     }
     catch(error)
     {

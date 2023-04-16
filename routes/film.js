@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const FilmController = require("../controllers/FilmController");
+const cacheMiddleware = require("../middleware/cacheMiddleware");
 
 
-router.get('/films', FilmController.getAllFilms);
-router.get('/films/:id', FilmController.getFilmsById);
+router.get('/films', cacheMiddleware, FilmController.getAllFilms);
+router.get('/films/:id', cacheMiddleware, FilmController.getFilmsById);
 
 module.exports = router;   

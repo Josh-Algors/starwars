@@ -8,20 +8,9 @@ const getAllComments = async (film_id) => {
 
     try
     {
-        const cacheKey = `comment-${film_id}`;
-        let comments = cache.get(cacheKey);
-    
-        if(comments)
-        {
-            return comments;
-        }
-        else
-        {
-            const film = await commentRepository.getAllComments(film_id);
-    
-            cache.set(cacheKey, film);
-            return film;
-        }
+        const film = await commentRepository.getAllComments(film_id);
+
+        return film;
     }
     catch(error)
     {

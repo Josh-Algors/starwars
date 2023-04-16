@@ -15,7 +15,7 @@ module.exports = {
         }
         catch(error)
         {
-            return res.status(500).json(helpers.sendError(error.message));
+            return res.status(500).json(helpers.sendError("Internal error occurred!"));
         }
     },
 
@@ -45,7 +45,7 @@ module.exports = {
         }
         catch(error)
         {
-            return res.status(500).json(helpers.sendError(error.message));
+            return res.status(500).json(helpers.sendError("Internal error occurred!"));
         }
     },
 

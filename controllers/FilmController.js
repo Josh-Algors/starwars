@@ -6,21 +6,36 @@ module.exports = {
 
     getAllFilms: async (req, res, next) => {
 
-        movies = await filmService.getFilms();
+        try
+        {
+            movies = await filmService.getFilms();
 
-        return res.status(200).json(helpers.sendSuccess("movies fetched successfully!", movies));
+            return res.status(200).json(helpers.sendSuccess("movies fetched successfully!", movies));
+        }
+        catch(error)
+        {
+            return res.status(500).json(helpers.sendError("Internal error occurred!"));
+        }
     },
 
     getFilmsById: async (req, res, next) => {
 
-        movie = await await filmService.getFilmsById(req.params.id);
-        
-        if(!movie)
+        try
         {
-            return res.status(404).json(helpers.sendError("film not found!"));
+            movie = await filmService.getFilmsById(req.params.id);
+ 
+            console.log(movie);
+            if(!movie)
+            {
+                return res.status(404).json(helpers.sendError("film not found!"));
+            }
+    
+            return res.status(200).json(helpers.sendSuccess("movie fetched successfully!", movie));
         }
-
-        return res.status(200).json(helpers.sendSuccess("movie fetched successfully!", movie));
+        catch(error)
+        {
+            return res.status(500).json(helpers.sendError("Internal error occurred!"));
+        }
     },
 
 
