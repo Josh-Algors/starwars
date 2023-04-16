@@ -1,9 +1,4 @@
-const { array } = require("joi");
-const { INTEGER } = require("sequelize");
 const db = require("../database/db");
-const starWars = require("../services/FilmService");
-const NodeCache = require('node-cache');
-const cache = new NodeCache({ stdTTL: 600, checkperiod: 120 });
 
 const getAllFilms = async () => {
 
@@ -23,14 +18,14 @@ const getFilmById = async (id) => {
 
 const createFilm = async (id, title, release_date) => {
 
-  const film = await db.Film.create({
-    id: id,
-    title: title,
-    release_date: release_date,
-    comment_count: 0
-    });
+      const film = await db.Film.create({
+        id: id,
+        title: title,
+        release_date: release_date,
+        comment_count: 0
+        });
 
-  return film;
+      return film;
 
 };
 

@@ -1,7 +1,4 @@
 const db = require("../database/db");
-const starWars = require("../services/FilmService");
-const NodeCache = require('node-cache');
-const cache = new NodeCache({ stdTTL: 600, checkperiod: 120 });
 
 const createComment = async (film_id, comment) => {
 
