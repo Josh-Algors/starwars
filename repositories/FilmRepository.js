@@ -77,7 +77,7 @@ const getFilmById = async (id) => {
       if(!film)
       {
         const response = await starWars.getFilmsById(id);
-        
+        console.log(response.url);
         if(response.url)
         {
          const resp = await db.Film.create({

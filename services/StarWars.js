@@ -26,7 +26,7 @@ const getFilmsById = async (id) => {
             return ;
         }
 
-        return response;
+        return response.data;
     }
     catch (error)
     {
