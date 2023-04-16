@@ -41,12 +41,10 @@ const getAllComments = async (film_id) => {
 
   if(comments)
   {
-    console.log("cached response");
     return comments;
   }
   else
   {
-    console.log("not cached response");
     const film = await db.Comment.findAll({where : {film_id : film_id}})
 
     cache.set(cacheKey, film);
