@@ -1,3 +1,3 @@
 #!/bin/bash
 cd /home/ubuntu/starwars/
-npm install
+sudo npm install
