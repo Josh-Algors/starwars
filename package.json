@@ -29,9 +29,5 @@
     "nodemon": "^2.0.22",
     "redis": "^4.6.5",
     "sequelize": "^6.31.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.2",
-    "sequelize-cli": "^6.2.0"
   }
 }
