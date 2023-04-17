@@ -28,12 +28,5 @@
     "node-cache": "^5.1.2",
     "redis": "^4.6.5",
     "sequelize": "^6.31.0"
-<<<<<<< HEAD
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.22",
-    "sequelize-cli": "^6.2.0"
-=======
->>>>>>> 0655eb4c35cf9c678efa9c1b929e3833f0e5ccdc
   }
 }
