@@ -5,8 +5,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash 
 nvm install node
 
 #create working directory
-DIR = "/var/www/html/codematics"
-
+DIR = "/home/ubuntu/nodejs-express"
 if [ -d "$DIR"]; then
     echo "${DIR} exists"
 else

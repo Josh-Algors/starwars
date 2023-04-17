@@ -1,7 +1,7 @@
 #!/bin/bash
-sudo chmod -R 777 /var/www/html/codematics
+sudo chmod -R 777 /home/ubuntu/nodejs-express
 
-cd /var/www/html/codematics
+cd /home/ubuntu/nodejs-express
 
 #add npm and node to path
 export NVM_DIR = "$HOME/.nvm"
