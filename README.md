@@ -17,7 +17,7 @@ The controller layer is responsible for handling HTTP requests and responses. Th
 To run the API, follow these steps:
 
 Clone the repository to your local machine.
-Install the dependencies by running <npm install> in the project directory.
+Install the dependencies by running `npm install` in the project directory.
 Create a .env file in the project directory and set the following environment variables:
 
 ```
@@ -39,7 +39,7 @@ DB_PASSWORD=<database-password>
 DB_NAME=<database-name>
 ```
 
-Then run <npm run migrate> to run migrations
+Then run `npm run migrate` to run migrations
 
 Start the server by running npm start.
 Send HTTP requests to the API endpoints using Postman.
