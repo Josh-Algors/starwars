@@ -24,7 +24,6 @@ module.exports = {
         {
             movie = await filmService.getFilmsById(req.params.id);
  
-            console.log(movie);
             if(!movie)
             {
                 return res.status(404).json(helpers.sendError("film not found!"));
