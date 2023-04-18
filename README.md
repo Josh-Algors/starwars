@@ -13,7 +13,7 @@ The business logic layer consists of the service layer, which contains classes t
 
 The controller layer is responsible for handling HTTP requests and responses. The controller classes use the service classes to perform operations on the database, and use the express framework to handle HTTP requests and responses.
 
-Running the API
+#### Running the API
 To run the API, follow these steps:
 
 Clone the repository to your local machine.
