@@ -2,7 +2,7 @@
 ## Film API
 This is a Node.js REST API that provides endpoints to manage a film database. The API leverages the repository pattern to interact with a MySQL database.
 
-## Repository Pattern
+### Repository Pattern
 The repository pattern is widely used design pattern that separates the data access layer from the business logic layer. The pattern provides a layer of abstraction between the application and the database, which can make the code more maintainable and testable.
 
 In this API, the repository layer consists of classes that implement CRUD (Create, Read, Update) operations for each entity. The classes provide a set of methods that can be used to perform operations on the database, such as getAllFilms(), getFilmById(), createComment(), getAllComments().
