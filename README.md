@@ -20,12 +20,19 @@ Clone the repository to your local machine.
 Install the dependencies by running <npm install> in the project directory.
 Create a .env file in the project directory and set the following environment variables:
 
+```
 PORT=<port-number>
+```
 DB_HOST=<database-host>
+```
 DB_PORT=<database-port>
+```
 DB_USER=<database-username>
+```
 DB_PASSWORD=<database-password>
+```
 DB_NAME=<database-name>
+```
 
 Then run <npm run migrate> to run migrations
 
