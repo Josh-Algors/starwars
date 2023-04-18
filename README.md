@@ -48,16 +48,16 @@ Send HTTP requests to the API endpoints using Postman.
 The API provides the following endpoints:
 
 ```
-> GET /films: Get all films in the database.
+GET /films: Get all films in the database.
 ```
 ```
-> GET /films/:id: Get a film by ID.
+GET /films/:id: Get a film by ID.
 ```
 ```
-> GET /films/:film_id/comments: Gets all comments for a film in the database.
+GET /films/:film_id/comments: Gets all comments for a film in the database.
 ```
 ```
-> POST /films/:film_id/comments: Add a new comment for a film using film_id to the database.
+POST /films/:film_id/comments: Add a new comment for a film using film_id to the database.
 ```
 
 ### Caching
