@@ -47,10 +47,18 @@ Send HTTP requests to the API endpoints using Postman.
 #### API Endpoints
 The API provides the following endpoints:
 
+```
 > GET /films: Get all films in the database.
+```
+```
 > GET /films/:id: Get a film by ID.
+```
+```
 > GET /films/:film_id/comments: Gets all comments for a film in the database.
+```
+```
 > POST /films/:film_id/comments: Add a new comment for a film using film_id to the database.
+```
 
 ### Caching
 Caching was also implemented in this application using the Node Cache module. The cache is used to store the response data from the /films endpoint, which retrieves all films from the Star Wars API and also stores in the MYSQL database.
