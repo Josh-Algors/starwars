@@ -1,7 +1,5 @@
 const axios = require('axios');
 const filmRepository = require("../repositories/FilmRepository");
-const NodeCache = require('node-cache');
-const cache = new NodeCache({ stdTTL: 600, checkperiod: 120 });
 
 const getFilms = async () => {
 
@@ -57,7 +55,6 @@ const getFilmsById = async (id) => {
             {
                 const resp = await filmRepository.createFilm(parseInt(id), response.title, response.release_date);
                 
-                cache.set(cacheKey, film);
                 return resp;
             }
             else
